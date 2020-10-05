@@ -1,0 +1,13 @@
+def selection_sort(list):
+    for i in range(0,len(list)):
+        for j in range(i,len(list)):
+            min=i
+            if list[j]<list[min]:
+                min=j
+            temp=list[i]
+            list[i]=list[min]
+            list[min]=temp
+    return list
+    
+list=[6,1,7,8,9,3,5,4,2]
+selection_sort(list)
