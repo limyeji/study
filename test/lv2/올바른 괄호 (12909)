@@ -1,0 +1,19 @@
+def solution(s):
+    answer=True
+    right=0
+    left=0
+    
+    for letter in s:
+        if ord(letter)==40:
+            left+=1
+        elif ord(letter)==41:
+            right+=1
+        if left<right:
+            answer=False
+    if left!=right:
+        answer=False
+        
+    return answer
+
+
+solution("(())()")
