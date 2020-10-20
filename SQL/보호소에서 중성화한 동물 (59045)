@@ -1,0 +1,6 @@
+-- 코드를 입력하세요
+SELECT i.animal_id, i.animal_type, i.name
+from animal_ins as i, animal_outs as o
+where i.animal_id=o.animal_id and 
+(i.sex_upon_intake = "intact male" or i.sex_upon_intake = "intact female") and
+(o.sex_upon_outcome = "spayed male" or o.sex_upon_outcome = "spayed female" or o.sex_upon_outcome = "neutered female" or o.sex_upon_outcome="neutered male")
