@@ -1,0 +1,14 @@
+N, B=int(input()), list(map(int, input().split()))
+
+A=[]
+sum=0
+for i in range(0,N):
+    if i==0:
+        A.append(B[i])
+        sum+=A[i]
+    else:
+        A.append(B[i]*(i+1)-sum)
+        sum+=A[i]
+
+for i in A:
+    print (i, end=" ")
