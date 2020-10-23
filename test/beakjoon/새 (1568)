@@ -1,0 +1,15 @@
+N=int(input())
+
+sec=0
+num=0
+
+while True:
+    num+=1
+    if N>0:
+        if N<num:
+            num=1
+        N-=num
+    else:
+        break
+    sec+=1
+print (sec)
